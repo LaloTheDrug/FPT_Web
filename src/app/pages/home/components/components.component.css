@@ -1,0 +1,103 @@
+header {
+  height: 60px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px 0 gray;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.banner {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  gap: 20px;
+  box-shadow: 0 2px 2px 0 #024FA0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.network {
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-shadow: 0 2px 2px 0 #F2721E;
+  padding: 10px;
+  gap: 10px;
+  user-select: none;
+}
+
+.network_card {
+  height: 500px;
+  width: 300px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: gray 1px solid;
+  border-radius: 5px;
+  flex-shrink: 0;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.network_card_img {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.news {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 2px 0 #50B846;
+}
+
+.news-card {
+  height: 200px;
+  width: 350px;
+  margin: 0 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  border: gray 1px solid;
+  border-radius: 5px;
+}
+
+footer {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 2px 0 gray;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.footer {
+  height: 90%;
+}

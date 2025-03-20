@@ -1,0 +1,25 @@
+<header>
+  <img class="logo" src="/assets/logo/FPT_logo_2010.svg.png">
+  <p>hello FPT</p>
+</header>
+<div class="banner" #bannerContainer>
+  @for (item of [].constructor(5); track $index) {
+    <app-banner></app-banner>
+  }
+</div>
+<div class="network" #networkContainer
+     (mousedown)="startDragging($event)"
+     (mousemove)="drag($event)"
+     (mouseup)="stopDragging()"
+     (mouseleave)="stopDragging()"
+     (wheel)="onWheel($event)">
+  @for (item of [].constructor(9); track $index) {
+    <app-card (cardClicked)="handleCardClick($event)"></app-card>
+  }
+</div>
+<div class="news">
+  <img class="news-card" src="/assets/logo/FPT_logo_2010.svg.png">
+</div>
+<footer>
+  <img class="footer" src="/assets/logo/1739025460519.gif">
+</footer>
