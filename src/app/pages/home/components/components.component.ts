@@ -1,16 +1,14 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { CardComponent } from '../../../components/card/card.component';
-import { BannerComponent } from '../../../components/banner/banner.component';
 
 @Component({
   selector: 'app-components',
   templateUrl: './components.component.html',
-  imports: [CardComponent, BannerComponent],
+  imports: [CardComponent],
   styleUrls: ['./components.component.css']
 })
 export class ComponentsComponent implements AfterViewInit, OnDestroy {
   @ViewChild('networkContainer') networkContainer!: ElementRef<HTMLDivElement>;
-  @ViewChild('bannerContainer', { static: false }) bannerContainer!: ElementRef<HTMLDivElement>;
 
   private isDragging = false;
   private startX = 0;
@@ -46,22 +44,7 @@ export class ComponentsComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    if (this.bannerContainer) {
-      this.autoScrollInterval = setInterval(() => {
-        const banner = this.bannerContainer.nativeElement;
-        const bannerWidth = banner.scrollWidth / 5; // Width of each image
-        const currentScroll = banner.scrollLeft;
-
-        // If scrolled to the end, reset to the beginning
-        if (currentScroll + banner.clientWidth >= banner.scrollWidth) {
-          banner.scrollLeft = 0;
-        } else {
-          banner.scrollLeft += bannerWidth; // Scroll to the next image
-        }
-      }, 5000); // 5 seconds
-    } else {
-      console.error('bannerContainer is not available');
-    }
+    // Add your initialization logic here
   }
 
   ngOnDestroy() {
